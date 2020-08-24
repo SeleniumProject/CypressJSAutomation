@@ -1,66 +1,70 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "tests": 0,
+    "passes": 0,
     "pending": 0,
     "failures": 0,
-    "start": "2020-08-24T15:54:27.599Z",
-    "end": "2020-08-24T15:54:39.377Z",
-    "duration": 11778,
+    "start": "2020-08-24T15:56:41.191Z",
+    "end": "2020-08-24T15:56:41.681Z",
+    "duration": 490,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
-    "other": 0,
-    "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "debb1398-36de-45d3-a9e7-ac641c3fa735",
+      "uuid": "1cb84aef-c699-4aa6-9f92-1831282fad8b",
       "title": "",
-      "fullFile": "cypress\\integration\\examples\\datadriventest.spec.js",
-      "file": "cypress\\integration\\examples\\datadriventest.spec.js",
+      "fullFile": "cypress\\integration\\specs\\hooks.spec.js",
+      "file": "cypress\\integration\\specs\\hooks.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "8e3e98df-3b62-4dfa-af85-4848a6f545ab",
-          "title": "This is data driven testing using Json",
+          "uuid": "cb9541d5-57d1-43c0-99b7-7818fda214e0",
+          "title": "Hooks",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "user enter the Login Data",
-              "fullTitle": "This is data driven testing using Json user enter the Login Data",
+              "title": "some data transfer",
+              "fullTitle": "Hooks some data transfer",
               "timedOut": null,
-              "duration": 4565,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 430,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.get('input#Email.email').type(this.data.email);\n// cy.wait(2000) // 2000ms = 2sec\ncy.get('input#Password.password').type(this.data.password);\n//  cy.wait(2000) // 2000ms = 2sec\ncy.get('input.button-1.login-button').click();",
-              "err": {},
-              "uuid": "2d7cb683-0b06-4432-9acc-d4bb45b6092e",
-              "parentUUID": "8e3e98df-3b62-4dfa-af85-4848a6f545ab",
+              "code": "cy.visit(this.data.name);\ncy.get('.ico-login').click();\ncy.get('#Email').type(this.data.email);",
+              "err": {
+                "message": "Error: 'example' is not valid JSON.\nParse error on line 5:\n...s\":{\"Samsung Note 8\",\"Nokia Edge\",\"iphon\n-----------------------^\nExpecting ':', got ','\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Hooks`",
+                "estack": "Error: 'example' is not valid JSON.\nParse error on line 5:\n...s\":{\"Samsung Note 8\",\"Nokia Edge\",\"iphon\n-----------------------^\nExpecting ':', got ','\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Hooks`\n    at Object.<anonymous> (C:\\Users\\alpha\\AppData\\Local\\Cypress\\Cache\\4.12.1\\Cypress\\resources\\app\\packages\\server\\lib\\fixture.js:135:13)\n    at Object.tryCatcher (C:\\Users\\alpha\\AppData\\Local\\Cypress\\Cache\\4.12.1\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\util.js:16:23)\n    at Promise._settlePromiseFromHandler (C:\\Users\\alpha\\AppData\\Local\\Cypress\\Cache\\4.12.1\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:547:31)\n    at Promise._settlePromise (C:\\Users\\alpha\\AppData\\Local\\Cypress\\Cache\\4.12.1\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:604:18)\n    at Promise._settlePromise0 (C:\\Users\\alpha\\AppData\\Local\\Cypress\\Cache\\4.12.1\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:649:10)\n    at Promise._settlePromises (C:\\Users\\alpha\\AppData\\Local\\Cypress\\Cache\\4.12.1\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:725:18)\n    at _drainQueueStep (C:\\Users\\alpha\\AppData\\Local\\Cypress\\Cache\\4.12.1\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\async.js:93:12)\n    at _drainQueue (C:\\Users\\alpha\\AppData\\Local\\Cypress\\Cache\\4.12.1\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\async.js:86:9)\n    at Async._drainQueues (C:\\Users\\alpha\\AppData\\Local\\Cypress\\Cache\\4.12.1\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\async.js:102:5)\n    at Immediate.Async.drainQueues [as _onImmediate] (C:\\Users\\alpha\\AppData\\Local\\Cypress\\Cache\\4.12.1\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\async.js:15:14)\n    at processImmediate (internal/timers.js:439:21)",
+                "diff": null
+              },
+              "uuid": "e57094af-9ad3-4907-890b-2f3387cc15a1",
+              "parentUUID": "cb9541d5-57d1-43c0-99b7-7818fda214e0",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "2d7cb683-0b06-4432-9acc-d4bb45b6092e"
+          "passes": [],
+          "failures": [
+            "e57094af-9ad3-4907-890b-2f3387cc15a1"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4565,
+          "duration": 430,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
