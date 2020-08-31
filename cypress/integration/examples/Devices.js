@@ -26,18 +26,7 @@ describe('website should display in the different resulution', ()=>{
  
      })
 
-     it('macbook view - 15 inch', ()=>{
-        cy.viewport('macbook-15')
-        cy.visit('http://demowebshop.tricentis.com/')
- 
-     })
- 
-     it('ipad 2', ()=>{
-        cy.viewport('ipad-2')
-        cy.visit('http://demowebshop.tricentis.com/')
- 
-     })
-
+    
      
      it('iphone-6  - land Scape', ()=>{
         cy.viewport('iphone-6', 'landscape')
