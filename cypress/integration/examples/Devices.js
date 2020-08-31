@@ -44,6 +44,12 @@ describe('website should display in the different resulution', ()=>{
         cy.visit('http://demowebshop.tricentis.com/')
  
      })
+
+     it('iphone-6  - land Scape', ()=>{
+      cy.viewport('iphone-8', 'landscape')
+      cy.visit('http://demowebshop.tricentis.com/')
+
+   })
     
      
 
